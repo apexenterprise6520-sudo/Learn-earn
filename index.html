@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Learn&amp;Earn - A Family of Builders | Kano State, Nigeria</title>
+<meta name="theme-color" content="#000000">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--g:#FFD700;--g2:#D4AF37;--bk:#000;--line:rgba(212,175,55,.45)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#000;color:#e9d9a0;font-family:Poppins,'Segoe UI',Roboto,Arial,sans-serif;line-height:1.75;font-size:16px;overflow-x:hidden}
+h1,h2,h3{font-weight:800;color:var(--g);line-height:1.2}
+a{color:inherit;text-decoration:none}
+.glow{position:fixed;inset:0;pointer-events:none;z-index:0}
+.glow i{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(212,175,55,.22),transparent 65%);will-change:transform}
+.glow i:nth-child(1){width:90vw;height:90vw;left:-30vw;top:-20vw}
+.glow i:nth-child(2){width:80vw;height:80vw;right:-35vw;top:45vh}
+header{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.94);border-bottom:1px solid var(--line);padding:8px 12px}
+.bar{max-width:1000px;margin:auto;display:flex;align-items:center;gap:12px}
+.bar img{height:38px;width:auto;border-radius:4px}
+nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+nav::-webkit-scrollbar{display:none}
+nav a{white-space:nowrap;padding:8px 12px;font-size:14px;font-weight:500;color:var(--g2);border-radius:20px;border:1px solid transparent;transition:.25s}
+nav a.on,nav a:hover{color:#000;background:linear-gradient(135deg,var(--g),var(--g2));font-weight:700}
+main{position:relative;z-index:1;max-width:1000px;margin:auto;padding:0 18px}
+.page{display:none;padding:34px 0 60px;animation:in .5s ease}
+.page.on{display:block}
+@keyframes in{from{opacity:0}to{opacity:1}}
+.px{position:absolute;left:0;right:0;top:0;height:420px;z-index:-1;pointer-events:none;will-change:transform;background:repeating-linear-gradient(115deg,transparent 0 60px,rgba(212,175,55,.06) 60px 61px)}
+.welcome{border:2px solid var(--g);background:linear-gradient(145deg,#14110a,#000);border-radius:16px;padding:26px 20px;text-align:center;box-shadow:0 0 30px rgba(255,215,0,.25);margin-bottom:46px}
+.welcome h2{font-size:clamp(26px,6vw,40px);margin-bottom:14px}
+.welcome p{color:#f2e3a8;max-width:62ch;margin:auto}
+.hero{text-align:center;padding:20px 0 10px}
+.hero h1{font-size:clamp(48px,13vw,96px);letter-spacing:-1px;background:linear-gradient(180deg,#fff2a8,var(--g) 40%,var(--g2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h3{font-size:clamp(18px,4.5vw,28px);color:var(--g2);margin:8px 0 16px;font-weight:500}
+.hero p.s{max-width:52ch;margin:0 auto 30px;color:#cdbb7c}
+.boxes{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:10px 0 34px}
+.box{border:1px solid var(--g2);border-radius:14px;padding:22px 14px;text-align:center;font-weight:700;color:var(--g);background:#0a0804;font-size:18px}
+.btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.btn{display:inline-block;padding:15px 28px;border-radius:50px;font-weight:700;font-size:16px;border:2px solid var(--g);cursor:pointer;font-family:inherit;transition:.25s}
+.b1{background:linear-gradient(135deg,var(--g),var(--g2));color:#000}
+.b2{background:transparent;color:var(--g)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 0 22px rgba(255,215,0,.45)}
+.pt{font-size:clamp(30px,7vw,52px);text-align:center;margin-bottom:30px}
+.sec{border-left:3px solid var(--g2);padding:4px 0 4px 16px;margin-bottom:34px}
+.sec h3{font-size:clamp(19px,4.5vw,26px);margin-bottom:10px}
+.sec p{color:#e4d398;max-width:70ch}
+.end{text-align:center;margin-top:40px}
+.gal{height:68vh;min-height:380px;overflow:hidden;border:1px solid var(--line);border-radius:14px;padding:0 12px;max-width:560px;margin:0 auto;-webkit-mask-image:linear-gradient(transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(transparent,#000 6%,#000 94%,transparent)}
+.trk{will-change:transform}
+.trk img{display:block;width:100%;height:auto;border:3px solid var(--g2);border-radius:10px;margin:14px 0;box-shadow:0 0 18px rgba(255,215,0,.2)}
+.sub{text-align:center;color:var(--g2);margin:-14px 0 24px}
+.faq{border:1px solid var(--line);border-radius:12px;margin-bottom:12px;background:#0a0804;overflow:hidden}
+.faq button{all:unset;box-sizing:border-box;width:100%;cursor:pointer;padding:16px 48px 16px 16px;color:var(--g);font-weight:700;position:relative;font-size:16px}
+.faq button::after{content:"+";position:absolute;right:16px;top:12px;font-size:24px;transition:.3s;color:var(--g2)}
+.faq.on button::after{transform:rotate(45deg)}
+.faq .a{max-height:0;overflow:hidden;transition:max-height .4s ease;padding:0 16px;color:#e4d398}
+.faq.on .a{padding-bottom:16px}
+.card{border:2px solid var(--g);border-radius:18px;padding:28px 20px;background:linear-gradient(145deg,#15110a,#000);box-shadow:0 0 30px rgba(255,215,0,.2);max-width:560px;margin:0 auto 28px}
+.card p{margin-bottom:10px;word-break:break-word}.card b{color:var(--g)}
+footer{position:relative;z-index:1;border-top:1px solid var(--line);text-align:center;padding:30px 18px 100px;color:var(--g2);font-size:14px;max-width:700px;margin:auto}
+.wa{position:fixed;right:16px;bottom:18px;z-index:90;width:62px;height:62px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 0 0 0 rgba(255,215,0,.7),0 0 22px 4px rgba(255,215,0,.55);animation:beam 1.8s infinite}
+.wa svg{width:34px;height:34px;fill:#fff}
+@keyframes beam{0%{box-shadow:0 0 0 0 rgba(255,215,0,.75),0 0 18px 3px rgba(255,215,0,.5)}70%{box-shadow:0 0 0 24px rgba(255,215,0,0),0 0 30px 8px rgba(255,215,0,.6)}100%{box-shadow:0 0 0 0 rgba(255,215,0,0),0 0 18px 3px rgba(255,215,0,.5)}}
+#ld{position:fixed;inset:0;background:#000;z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity .8s}
+#ld.out{opacity:0;pointer-events:none}
+#ld img{width:min(82vw,460px);border-radius:12px;animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{filter:drop-shadow(0 0 8px rgba(255,215,0,.35));transform:scale(1)}50%{filter:drop-shadow(0 0 38px rgba(255,215,0,.95));transform:scale(1.05)}}
+#ld p{margin-top:26px;color:var(--g);font-weight:700;letter-spacing:3px;font-size:18px}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01s!important}}
+</style>
+</head>
+<body>
+<div id="ld"><img src="logo.png" alt="Learn&Earn logo"><p>Learn&amp;Earn...</p></div>
+<div class="glow"><i data-s=".15"></i><i data-s="-.1"></i></div>
+<header><div class="bar"><img src="logo.png" alt="Learn&Earn"><nav id="nav">
+<a href="#home">Home</a><a href="#story">Our Story</a><a href="#gallery">Gallery</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav></div></header>
+<main>
+
+<section class="page" id="p-home"><div class="px" data-s=".3"></div>
+<div class="welcome"><h2>Welcome. We Have Been Expecting Your Arrival.</h2>
+<p>You are not just a visitor. You are one in a billion. Out of billions of people in the world, you found us. That is not a mistake. That is destiny. Take your time. Read our story. Your seat in the Family is waiting.</p></div>
+<div class="hero"><h1>Learn&amp;Earn</h1><h3>An Organization. A Family of Builders.</h3>
+<p class="s">We build premium websites for Businesses. And we teach Nigerian youths how to build them too.</p></div>
+<div class="boxes"><div class="box">Learn A Big Skill</div><div class="box">Build With Family</div><div class="box">Compete And Earn 5%</div></div>
+<div class="btns"><a class="btn b1 wal">Join The Family</a><a class="btn b2" href="#story">Read Our Story</a></div></section>
+
+<section class="page" id="p-story"><div class="px" data-s=".3"></div>
+<h1 class="pt">Our Grand Story</h1><div id="story"></div>
+<div class="end"><a class="btn b1 wal">Join The Family Now</a></div></section>
+
+<section class="page" id="p-gallery"><div class="px" data-s=".3"></div>
+<h1 class="pt">Gallery Of Our Best Websites</h1>
+<p class="sub">Some Of Our Best Premium Websites For Businesses</p>
+<div class="gal" id="gal"><div class="trk" id="trk"></div></div>
+<div class="end" style="margin-top:22px"><button class="btn b1" id="tg">Stop Auto Scroll</button></div></section>
+
+<section class="page" id="p-faq"><div class="px" data-s=".3"></div>
+<h1 class="pt">Frequently Asked Questions - FAQ</h1><div id="faqs"></div></section>
+
+<section class="page" id="p-contact"><div class="px" data-s=".3"></div>
+<h1 class="pt">Contact Us</h1>
+<div class="card"><p><b>Name of Business:</b> Learn&amp;Earn</p><p><b>Location:</b> Kano State, Nigeria</p><p><b>WhatsApp:</b> 07065205154</p><p><b>Email:</b> apexenterprise6520@gmail.com</p></div>
+<p style="text-align:center;font-size:20px;color:var(--g);font-weight:700;margin-bottom:26px">DM us now. We have been expecting your arrival.</p>
+<div class="end" style="margin-top:0"><a class="btn b1 wal">Chat On WhatsApp</a></div></section>
+
+</main>
+<footer>Learn&amp;Earn - Kano State, Nigeria. A Family of Builders. An Organization of Premium Websites for Businesses. Made with our brains, built with special tools. Double F - Functional and Flawless.</footer>
+<a class="wa wal" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.3 8.600 3.300 15.600c0 2.400.7 4.700 1.900 6.600L3 29l7-1.800c1.900 1 4 1.600 6 1.600 7 0 12.700-5.700 12.700-12.700S23 3 16 3zm0 23.200c-1.900 0-3.800-.5-5.400-1.500l-.4-.2-4.100 1.100 1.100-4-.3-.4a10.400 10.400 0 1 1 9.100 5zm5.700-7.800c-.3-.2-1.900-.9-2.200-1-.3-.1-.5-.2-.7.2-.2.300-.8 1-1 1.200-.2.200-.4.200-.7.100-.3-.2-1.400-.5-2.600-1.600-1-.9-1.600-1.900-1.800-2.200-.2-.3 0-.5.100-.7l.5-.6c.2-.2.200-.3.300-.5.100-.2.100-.4 0-.6l-1-2.300c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.100-.9.400-.3.300-1.200 1.200-1.200 2.800s1.200 3.300 1.400 3.500c.2.200 2.400 3.700 5.800 5.100.8.400 1.400.6 1.900.7.8.3 1.500.2 2.100.1.600-.1 1.900-.8 2.200-1.500.3-.7.300-1.400.2-1.500-.1-.1-.3-.2-.6-.4z"/></svg></a>
+
+<script>
+const NUM="2347065205154",MSG="Hi Learn&Earn, I want to join.";
+const WA="https://wa.me/"+NUM+"?text="+encodeURIComponent(MSG);
+document.querySelectorAll(".wal").forEach(a=>{a.href=WA;a.target="_blank";a.rel="noopener"});
+
+const story=[
+["Welcome To Learn&Earn - Read This To The End, Your Life Is About To Change","Let me ask you one question. Have you ever opened your phone, seen a Business with a beautiful website, Black and Gold, smooth, premium, like a bank, and you said to yourself: \"Who built this? How much did they pay the person who built it?\" That person could be YOU. Welcome to Learn&Earn. We are not a school. We are not an online coach. We are an Organization. A Family of Builders. A Family of Nigerian youths who decided to stop chasing small hustles, and start building something big."],
+["What Do We Do?","We build premium websites for Businesses. What is a premium website? Let me show you. Imagine a fashion brand. A person wants to buy clothes from them. They check Instagram, they see fine pictures. But they are still scared. \"Is this business real? Will they scam me?\" Then they see the Business has a website. Black and Gold. Premium. With Home, About, Services, Contact, WhatsApp Button, Location. They click it. It opens fast. It looks expensive. It looks trusted. Immediately, they trust the Business. They buy. That is the power of a premium website. It makes a small Business look like a big Company. It makes people trust. It makes people pay. And guess what? Every Business needs it. Fashion brands need it. Logistics companies need it. Tech companies need it. Restaurants need it. Schools need it. Churches need it. If a Business has no website in 2026, people will think it is not serious. And who builds those websites? WE DO. And we will teach YOU how to build them too."],
+["How Do You Join?","It is simple. Like a normal Nigerian citizen. You DM the Admin. You say \"I want to join Learn&Earn.\" Admin sends you the payment details. You pay ₦10,000 once. Just once. Not monthly. Not every year. Once. You send screenshot of your transfer. Admin checks it. If it is real, Admin adds you to our two private WhatsApp Groups YOURSELF. No link. No leak. No free people. Only real Members. You are in. You are now part of the Family. You are not paying much. You are learning big."],
+["What Happens Inside The Family?","Inside the Family, we teach you, step by step, how to build premium websites for Businesses. From thinking of the idea, to designing it, to building it, to launching it on the internet for the whole world to see. We show you how we built our own website. The same website you are reading now. We built it with our brains, amplified with special tools. We will show you the secret. We will hold your hand until you can build it yourself. You don't need a laptop. Your phone is enough. If you can use WhatsApp, you can build a premium website."],
+["You Practice With Your Family","You don't just watch and sleep. You build. First, you build your own website. Your name. Your picture. Your business. You prove to yourself: \"I can do this.\" Then, you build websites for Businesses. A fashion brand. A logistics company. A tech business. You get faster. You get better. You get more confident. You are not alone. You are in a Family. If you don't understand, you ask. Admin helps you. Other builders help you. We grow together."],
+["You Compete And You Earn - This Is The Exciting Part","Every month, inside our Organization, we do a Competition. We give you a task: \"Build the best premium website for a Business.\" You build. You post your proof. We check: Who was Best in design? Who was Best in function? Who was Fastest? The winner does not get a small gift. The winner gets 5% of OUR profit for that month. Yes, you heard me right. 5%. If our Organization makes profit that month, our best builder gets 5% of it. And we show the profit openly to everyone. Transparent. No hiding. No cheating. Fair for all to see. Imagine you are the winner. Imagine Admin announces your name in the group. \"This month, our best builder is YOU. You get 5%.\" Your phone vibrates. Money enters. Your family sees you are not just pressing phone, you are building something. That feeling? That is what we are building here."],
+["You Earn Even While You Learn","If you like the Family, and you bring your friend to join, you also earn ₦2,000. Your choice. Not compulsory. If you bring, you earn. If you don't bring, you still learn, you still build, you still compete. No pressure. No force."],
+["Why Should You Join Us And Not Just Learn Alone?","Because alone, you will give up in 2 days. You will watch one video, get confused, and stop. Inside a Family, you will not give up. When you are tired, another builder will push you. When you are confused, Admin will explain. When you win, the whole Family will celebrate you. We are not selling hustle. We are not selling ₦500 here, ₦1,000 there. We are building Builders. We are building people who can build a Business in their pocket. People who can build a website for a Business today, and tomorrow that Business will pay them. We are an Organization that pays its best Member. Which Organization in Nigeria does that? Tell me one. No Organization does that. Only OURS. We are a Family where the Admin is transparent. Where the Admin shows the profit. Where the Admin says: \"This month we made this much, and our best builder gets 5%.\" That is grand. That is different. That is why Businesses will trust you, and why you should join us."],
+["So, What Is Your Next Step?","You have two choices. Choice 1: Close this message. Go back to scrolling. Watch other people build websites and earn money. Tomorrow, you will forget this message. Choice 2: DM us now. Say \"I want to join Learn&Earn.\" We will send you the payment details. You pay ₦10,000 once. We add you. You start building. One choice keeps you where you are. The other choice puts you in a Family of Builders. Which one will you choose? DM us now. Your seat is waiting. The Family is waiting. The next Competition is coming. Will you be the next winner? Learn&Earn - Kano State, Nigeria. A Family of Builders. An Organization of Premium Websites for Businesses."]
+];
+document.getElementById("story").innerHTML=story.map(s=>`<div class="sec"><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join("");
+
+const faq=[
+["What is Learn&Earn?","Learn&Earn is an Organization, a Family of Builders, based in Kano State, Nigeria. We build premium websites for Businesses, and we teach Nigerian youths how to build them too. Inside the Family you learn, you build, you compete, and you can earn."],
+["Is Learn&Earn a school or a company?","Neither one alone. We are not a school and we are not an online coach. We are an Organization. We work like a company that builds premium websites for Businesses, and we work like a Family that grows its Members together."],
+["What skill will I learn?","You will learn how to build premium websites for Businesses, the Black and Gold, fast, smooth, trusted kind. We take you from the idea, to the design, to building it, to launching it online for the whole world to see."],
+["Do I need a laptop to learn?","No. Your phone is enough. If you can use WhatsApp, you can build a premium website. Many of our builders learn and build fully on their phones."],
+["Do I need to know coding before I join?","No. You can start from zero. We teach step by step and hold your hand until you can build it yourself. If you get stuck, Admin and other builders are there to help."],
+["How do I join Learn&Earn?","It is simple. DM the Admin on WhatsApp and say \"I want to join Learn&Earn.\" Admin sends you the payment details, you pay once, and you send your transfer screenshot. Then you are added to the Family."],
+["How do I pay?","You pay by Bank Transfer. Admin sends you the account details when you DM. After you transfer, send the screenshot to Admin so it can be checked."],
+["How much is the payment?","₦10,000 once. Just once. Not monthly. Not every year. One payment and you are part of the Family."],
+["After I pay, what happens next?","Admin checks your transfer screenshot. If it is real, Admin adds you YOURSELF to our two private WhatsApp Groups. No link, no leak, no free people. Then you start learning and building right away."],
+["How are the WhatsApp Groups?","There are two private groups, and only real Members are inside. One is for learning and one is for competition. Admin adds you personally, so the Family stays safe and serious."],
+["What is the Learning Group for?","This is where we teach you step by step how to build premium websites for Businesses. You also build your own website first, ask questions, and get help from Admin and other builders."],
+["What is the Competition Group for?","This is where the monthly Competition happens. Admin gives the task, builders post their proof, and winners are announced here for the whole Family to celebrate."],
+["How does the monthly competition work?","Every month, Admin gives a task: build the best premium website for a Business. You build and post your proof. We check who was Best in design, who was Best in function, and who was Fastest. The best builder wins."],
+["What is 5% profit? How is it calculated?","If our Organization makes profit in a month, the winner of that month's Competition gets 5% of that profit. For example, if the profit is ₦1,000,000, the winner receives ₦50,000. The profit is shown openly to everyone."],
+["Is the profit sharing real and transparent?","Yes. Admin shows the profit openly to the whole Family. No hiding, no cheating. Everyone can see what we made, and everyone can see what the winner gets. Fair for all."],
+["Do I get reward if I bring my friend?","Yes, ₦2,000. When you bring your friend and they join the Family, you earn ₦2,000 for it."],
+["Is referral compulsory?","No. It is your choice. If you bring a friend, you earn. If you do not, you still learn, you still build, and you still compete. No pressure. No force."],
+["What if I don't understand a lesson?","Ask. That is why we are a Family. Admin will explain, and other builders will help you. You are never alone, and we will not leave you behind."],
+["Can I build websites for Businesses after learning?","Yes. That is the goal. Every Business needs a premium website, from fashion brands to logistics companies, restaurants, schools and churches. When you can build one, Businesses will pay you for it."],
+["How do I contact Learn&Earn?","Message us on WhatsApp at 07065205154, or email apexenterprise6520@gmail.com. We are in Kano State, Nigeria. DM us now. We have been expecting your arrival."]
+];
+const fq=document.getElementById("faqs");
+faq.forEach((f,i)=>{const d=document.createElement("div");d.className="faq";
+d.innerHTML=`<button aria-expanded="false">${i+1}. ${f[0]}</button><div class="a"><p>${f[1]}</p></div>`;
+d.firstChild.onclick=()=>{const a=d.querySelector(".a"),o=d.classList.toggle("on");a.style.maxHeight=o?a.scrollHeight+"px":0;d.firstChild.setAttribute("aria-expanded",o)};
+fq.appendChild(d)});
+
+/* gallery: premium black & gold website pictures (placeholders) */
+function shot(v){const c=["#FFD700","#D4AF37"][v%2],t=40+v*7;
+let s=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420"><rect width="600" height="420" fill="#000"/><rect width="600" height="36" fill="#0d0b05"/><circle cx="24" cy="18" r="8" fill="${c}"/><rect x="380" y="14" width="40" height="8" rx="4" fill="#D4AF37"/><rect x="430" y="14" width="40" height="8" rx="4" fill="#D4AF37"/><rect x="480" y="14" width="40" height="8" rx="4" fill="#D4AF37"/><rect x="540" y="8" width="40" height="20" rx="10" fill="${c}"/>`;
+if(v%3==0)s+=`<rect x="0" y="36" width="600" height="190" fill="url(#g${v})"/><defs><linearGradient id="g${v}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a2108"/><stop offset="1" stop-color="#000"/></linearGradient></defs><rect x="40" y="90" width="${220+t}" height="22" rx="4" fill="${c}"/><rect x="40" y="124" width="180" height="22" rx="4" fill="#fff" opacity=".85"/><rect x="40" y="166" width="110" height="30" rx="15" fill="${c}"/>`;
+else if(v%3==1)s+=`<circle cx="450" cy="130" r="80" fill="none" stroke="${c}" stroke-width="3"/><circle cx="450" cy="130" r="50" fill="#2a2108"/><rect x="40" y="80" width="260" height="24" rx="4" fill="${c}"/><rect x="40" y="116" width="200" height="12" rx="4" fill="#bba55a"/><rect x="40" y="138" width="230" height="12" rx="4" fill="#bba55a"/><rect x="40" y="176" width="120" height="30" rx="4" fill="none" stroke="${c}" stroke-width="2"/>`;
+else s+=`<rect x="40" y="70" width="520" height="14" rx="4" fill="${c}"/><rect x="150" y="100" width="300" height="26" rx="4" fill="#fff" opacity=".85"/><rect x="230" y="150" width="140" height="34" rx="17" fill="${c}"/><rect x="0" y="210" width="600" height="1" fill="#D4AF37"/>`;
+for(let i=0;i<3;i++)s+=`<rect x="${40+i*180}" y="250" width="160" height="110" rx="10" fill="#0d0b05" stroke="${c}" stroke-width="2"/><rect x="${56+i*180}" y="266" width="60" height="10" rx="3" fill="${c}"/><rect x="${56+i*180}" y="290" width="128" height="8" rx="3" fill="#8a7634"/><rect x="${56+i*180}" y="308" width="100" height="8" rx="3" fill="#8a7634"/><rect x="${56+i*180}" y="332" width="40" height="10" rx="5" fill="${c}"/>`;
+s+=`<circle cx="560" cy="385" r="18" fill="#25D366"/></svg>`;
+return "data:image/svg+xml;charset=utf-8,"+encodeURIComponent(s)}
+const trk=document.getElementById("trk");let h="";
+for(let r=0;r<2;r++)for(let v=0;v<6;v++)h+=`<img src="${shot(v)}" alt="Premium website" loading="lazy">`;
+trk.innerHTML=h;
+let y=0,run=true,half=0,last=0;
+function tick(t){if(run&&document.getElementById("p-gallery").classList.contains("on")){half=trk.scrollHeight/2;y+=(t-last)*.04;if(y>=half)y=0;trk.style.transform=`translateY(${-y}px)`}last=t;requestAnimationFrame(tick)}
+requestAnimationFrame(tick);
+const tg=document.getElementById("tg");
+tg.onclick=()=>{run=!run;tg.textContent=run?"Stop Auto Scroll":"Start Auto Scroll"};
+
+/* router: one page at a time */
+function route(){let k=(location.hash||"#home").slice(1);if(!document.getElementById("p-"+k))k="home";
+document.querySelectorAll(".page").forEach(p=>p.classList.toggle("on",p.id=="p-"+k));
+document.querySelectorAll("#nav a").forEach(a=>{const on=a.getAttribute("href")=="#"+k;a.classList.toggle("on",on);if(on)a.scrollIntoView({inline:"center",block:"nearest"})});
+window.scrollTo(0,0);if(k=="gallery"){y=0}}
+addEventListener("hashchange",route);route();
+
+/* parallax */
+const ps=[...document.querySelectorAll("[data-s]")];let tk=false;
+addEventListener("scroll",()=>{if(!tk){tk=true;requestAnimationFrame(()=>{const s=scrollY;ps.forEach(e=>e.style.transform=`translate3d(0,${s*e.dataset.s}px,0)`);tk=false})}},{passive:true});
+
+/* loader */
+setTimeout(()=>{const l=document.getElementById("ld");l.classList.add("out");setTimeout(()=>l.remove(),900)},3000);
+</script>
+</body>
+</html>
